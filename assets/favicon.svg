@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DW agentic AI mark">
+  <rect width="64" height="64" rx="12" fill="#080b10"/>
+  <path d="M14 18h16c10 0 18 8 18 18s-8 18-18 18H14V18Zm9 8v20h7c6 0 10-4 10-10s-4-10-10-10h-7Z" fill="#7dd7ff"/>
+  <path d="M18 14h28v8H18zM18 42h28v8H18z" fill="#9cffc8" opacity=".92"/>
+</svg>

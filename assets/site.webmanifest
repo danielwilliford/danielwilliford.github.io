@@ -1,0 +1,17 @@
+{
+  "name": "Daniel Williford | Forward Deployed Agentic AI",
+  "short_name": "DW Agentic AI",
+  "description": "Proof-of-work portfolio for forward deployed agentic AI systems.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#080b10",
+  "theme_color": "#080b10",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

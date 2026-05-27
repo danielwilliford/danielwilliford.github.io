@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study | Evidence Backed Research Pipeline</title>
+  <meta name="description" content="Research workflow that turns tool calls and source checks into human readable, evidence backed reports with ledgers, critique, limits, and human review boundaries.">
+  <meta property="og:title" content="Case Study | Evidence Backed Research Pipeline">
+  <meta property="og:description" content="Research workflow that turns tool calls and source checks into human readable, evidence backed reports with ledgers, critique, limits, and human review boundaries.">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="https://danielwilliford.github.io/assets/social-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image" content="https://danielwilliford.github.io/assets/social-preview.png">
+  <meta name="theme-color" content="#080b10"><link rel="canonical" href="https://danielwilliford.github.io/projects/evidence-backed-research-pipeline.html"><meta property="og:url" content="https://danielwilliford.github.io/projects/evidence-backed-research-pipeline.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../assets/site.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Evidence Backed Research Pipeline","name":"Evidence Backed Research Pipeline","description":"Research workflow that turns tool calls and source checks into human readable, evidence backed reports with ledgers, critique, limits, and human review boundaries.","author":{"@type":"Person","name":"Daniel Williford"},"inLanguage":"en","keywords":["Evidence backed research","Source grading","Tool trace","Research artifacts","Critique loop","Human readable AI research"],"about":["Evidence ledger","Research workflow","Reviewable AI artifacts"]}</script></head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="nav"><div class="site-shell nav-inner nav-simple"><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#projects">Projects</a><a href="#architecture">Architecture</a><a href="#sample-research-packet">Sample packet</a><a href="#verification">Evidence</a></div></div></nav>
+  <main id="main-content" tabindex="-1">
+    <section class="project-hero site-shell">
+      <div class="eyebrow">Case study</div>
+      <h1>Evidence Backed Research Pipeline</h1>
+      <p class="lede">A research artifact pipeline that turns tool calls and source checks into evidence ledgers, contradiction review, readable packets, and human decision gates.</p>
+      <div class="badges"><span class="badge">Tool trace</span><span class="badge">Evidence ledger</span><span class="badge">Source grading</span><span class="badge">Critique loop</span><span class="badge">Readable packet</span><span class="badge">Human review</span></div><div class="actions"><a class="btn primary" href="https://github.com/danielwilliford/evidence-backed-research-pipeline">Public repo</a><a class="btn" href="#verification">Artifact contract</a></div>
+      <div class="proof-strip"><div class="proof-item"><b>Tool activity</b><span>Collection, extraction, comparison, contradiction checks, and critique steps are visible in the artifact trail.</span></div><div class="proof-item"><b>Claim ledger</b><span>Final claims stay tied to source material, confidence, and open questions.</span></div><div class="proof-item"><b>Readable output</b><span>The deliverable is a memo a person can review, not a blob of agent prose.</span></div><div class="proof-item"><b>Boundary control</b><span>Local paths, credentials, unsupported claims, and action authority stay out of the report package.</span></div></div>
+    </section>
+
+    <section class="section site-shell">
+      <div class="grid two">
+        <div class="card"><div class="kicker">Problem</div><h2>AI research is cheap to generate and easy to overtrust.</h2><p>A useful research agent has to show what it checked, where claims came from, what contradicts them, and what still needs verification before anyone acts on the output.</p></div>
+        <div class="card"><div class="kicker">System</div><h2>Make the research trail inspectable.</h2><p>The workflow decomposes a question, gathers sources, normalizes tool results, builds an evidence ledger, critiques conclusions, and writes a human readable packet with limits and next steps.</p></div>
+      </div>
+    </section>
+
+    <section class="section site-shell" id="architecture">
+      <div class="kicker">Architecture</div>
+      <h2>Research becomes an artifact trail.</h2>
+      <div class="timeline"><div class="stage"><b>01 Question</b><span>Frame the decision, scope, and human boundary before the run starts.</span></div><div class="stage"><b>02 Tools</b><span>Collect source material, dated context, comparison points, and source metadata.</span></div><div class="stage"><b>03 Ledger</b><span>Normalize claims into evidence rows with confidence, source anchors, and open questions.</span></div><div class="stage"><b>04 Memo</b><span>Turn raw facts into thesis, supporting evidence, contradictions, and risks.</span></div><div class="stage"><b>05 Decision gate</b><span>Label stale inputs, missing data, and required refresh steps before any human action.</span></div></div>
+    </section>
+
+    <section class="section site-shell" id="sample-research-packet">
+      <div class="kicker">Sample research packet</div>
+      <h2>Tool calls on one side, readable research on the other.</h2>
+      <div class="grid two">
+        <div class="card flat"><h3>Enterprise vendor evaluation frame</h3><p>A representative packet evaluates whether a tool or vendor is suitable for a regulated workflow. The important public signal is not the private source corpus; it is the process for connecting claims to evidence.</p><ul class="clean"><li><b>Working question:</b> Can this system satisfy the user workflow without creating hidden compliance, security, or support risk?</li><li><b>Evidence lanes:</b> product docs, security posture, integration surface, pricing/operational constraints, failure modes, and user handoff requirements.</li><li><b>Contradiction pass:</b> What claims depend on vendor marketing, stale docs, missing policy, or untested integration assumptions?</li><li><b>Human boundary:</b> Do not promote to implementation until missing controls and unresolved evidence gaps are reviewed by a person.</li></ul></div>
+        <pre class="code"><code>research_run: vendor_workflow_fit_packet
+mode: evidence_first_research
+lanes:
+  source_collection
+  integration_surface_review
+  risk_and_failure_mode_review
+  cost_and_support_review
+calls:
+  collect_primary_docs
+  extract_claims_and_requirements
+  build_evidence_ledger
+  compare_against_workflow_constraints
+  red_team_memo
+  produce_human_readable_packet
+fail_closed_notes:
+  unsupported claims labeled unresolved
+  stale source dates carried forward
+  missing security/compliance answers become blockers
+  no implementation authority granted by the memo</code></pre>
+      </div>
+    </section>
+
+    <section class="section site-shell">
+      <div class="kicker">Research result</div>
+      <h2>The output is a decision checklist, not a command.</h2>
+      <div class="grid four"><div class="card flat"><h3>Rubric visible quality</h3><p>Scores or recommendations are only useful when the rubric and deductions are visible beside them.</p></div><div class="card flat"><h3>Evidence rows</h3><p>Claims are tied to source anchors, dates, confidence, and open questions.</p></div><div class="card flat"><h3>Diligence steps</h3><p>The packet names what must be refreshed, tested, or verified before implementation.</p></div><div class="card flat"><h3>Human owned</h3><p>No purchase, rollout, or operational change is authorized by the research artifact alone.</p></div></div>
+    </section>
+
+    <section class="section site-shell" id="verification">
+      <div class="grid two">
+        <div><div class="kicker">Implementation evidence</div><h2>The page shows the artifact contract directly.</h2><p>The page exposes the same chain the system uses: tool trace, source list, methodology note, evidence ledger, contradiction pass, quality rubric, stale data labels, and a human decision boundary.</p><p>Sensitive implementation details are not part of the evidence chain. No local paths, credentials, proprietary source notes, private strategies, or session state are needed to evaluate the work.</p></div>
+        <pre class="code"><code>Research artifact contract:
+tool trace / source list
+methodology note
+evidence ledger
+contradiction / red team pass
+stale data and limitation labels
+visible quality rubric
+human decision boundary
+reusable report memory</code></pre>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="site-shell"><a href="../index.html">Back to homepage</a></div></footer>
+</body>
+</html>
