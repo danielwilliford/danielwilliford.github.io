@@ -9,7 +9,7 @@
   <meta property="og:description" content="Quantitative finance research copilot with ML signals, sandbox trials, typed dashboard APIs, source freshness, evidence validation, and human approval boundaries.">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="https://daniel-williford.dev/assets/social-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image" content="https://daniel-williford.dev/assets/social-preview.png">
-  <meta name="robots" content="noindex"><meta name="theme-color" content="#080b10"><link rel="canonical" href="https://daniel-williford.dev/projects/human-in-the-loop-quant-research-copilot.html"><meta property="og:url" content="https://daniel-williford.dev/projects/human-in-the-loop-quant-research-copilot.html">
+  <meta name="theme-color" content="#080b10"><link rel="canonical" href="https://daniel-williford.dev/projects/human-in-the-loop-quant-research-copilot.html"><meta property="og:url" content="https://daniel-williford.dev/projects/human-in-the-loop-quant-research-copilot.html">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../assets/site.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Human-in-the-Loop ML Finance Research Copilot","name":"Human-in-the-Loop ML Finance Research Copilot","description":"Quantitative finance research copilot with ML signals, sandbox trials, typed dashboard APIs, source freshness, evidence validation, and human approval boundaries.","author":{"@type":"Person","name":"Daniel Williford"},"inLanguage":"en","keywords":["Human-in-the-loop AI","ML finance research","Typed dashboard APIs","Data validation","Sandboxed finance research"],"about":["Finance research copilot","Data provenance","Human approval workflow"]}</script></head>
 <body>
@@ -19,9 +19,9 @@
     <section class="project-hero site-shell">
       <div class="eyebrow">Case study</div>
       <h1>Human in the Loop ML Finance Research Copilot</h1>
-      <p class="lede">A sanitized case study for a private, high stakes, advisory only finance research system. The public artifact shows the workflow architecture and control posture: LangGraph/LangChain style workflows surface ML signals and research candidates, but quality gates, freshness checks, provenance, and human review decide what is usable.</p>
-      <div class="badges"><span class="badge">LangGraph/LangChain</span><span class="badge">Research copilot</span><span class="badge">ML signals</span><span class="badge">Sandbox trials</span><span class="badge">Evidence provenance</span><span class="badge">Execution separated</span><span class="badge">Human approval</span></div>
-      <div class="proof-strip"><div class="proof-item"><b>Execution boundary</b><span>LLM research and paper trials stay separate from deterministic trading software.</span></div><div class="proof-item"><b>Data validation</b><span>Sandbox backtests, leakage checks, coverage gates, and reproducible artifacts.</span></div><div class="proof-item"><b>Dashboard operations</b><span>Typed finance APIs, source health, degraded state labels, and dry run job controls.</span></div><div class="proof-item"><b>Research coverage</b><span>Freshness, provenance, report status, and review blockers surfaced before action.</span></div></div>
+      <p class="lede">A sanitized public proof case for an advisory only finance research control plane. It shows the engineering pattern from a private quant platform: schema driven ingestion, experiment packets, artifact ledgers, eval gates, paper only promotion, and human approval boundaries.</p>
+      <div class="badges"><span class="badge">LangGraph/LangChain</span><span class="badge">Research copilot</span><span class="badge">ML signals</span><span class="badge">Sandbox trials</span><span class="badge">Evidence provenance</span><span class="badge">Artifact ledger</span><span class="badge">Human approval</span><span class="badge">Validation suite</span></div>
+      <div class="proof-strip"><div class="proof-item"><b>Public proof repo</b><span>Extracted as agentic-finance-research-control-plane with sanitized schemas, fixtures, artifacts, and tests.</span></div><div class="proof-item"><b>Execution boundary</b><span>LLM research and paper trials stay separate from deterministic trading software.</span></div><div class="proof-item"><b>Data validation</b><span>Sandbox backtests, leakage checks, coverage gates, and reproducible artifacts.</span></div><div class="proof-item"><b>Dashboard operations</b><span>Typed finance APIs, source health, degraded state labels, and dry run job controls.</span></div><div class="proof-item"><b>Research coverage</b><span>Freshness, provenance, report status, and review blockers surfaced before action.</span></div></div><div class="actions"><a class="btn primary" href="https://github.com/danielwilliford/agentic-finance-research-control-plane">Public proof repo</a><a class="btn" href="#evidence">Implementation evidence</a></div>
     </section>
 
     <section class="section site-shell">
@@ -41,8 +41,8 @@
     <section class="section site-shell">
       <div class="callout">
         <div class="kicker">Publication boundary</div>
-        <h2>The finance system is shown as a sanitized architecture case, not a public code release.</h2>
-        <p>The public page omits strategy logic, datasets, account state, broker paths, parameters, current holdings, and performance claims. The GitHub safe proof should come from extracted infrastructure patterns: workflow services, feed normalization hygiene, schemas, tests, dashboards, and guardrail examples.</p>
+        <h2>The private finance system is shown through a sanitized public extraction.</h2>
+        <p>The public page omits strategy logic, datasets, account state, broker paths, parameters, current holdings, and performance claims. The safe proof repo shows the transferable engineering pattern: schema gallery, synthetic fixtures, experiment packets, artifact ledgers, approval decisions, tests, and guardrail examples.</p>
       </div>
     </section>
 
@@ -126,7 +126,9 @@
     <section class="section site-shell" id="evidence">
       <div class="grid two">
         <div><div class="kicker">Implementation evidence</div><h2>Build notes and proof points.</h2><p>This section works like a compact technical README: the concrete validators, dashboards, and artifacts behind the case study.</p><p>Evidence comes from LangGraph/LangChain style workflow orchestration, deterministic quant agent evaluation, read only A/B backtests, real minute tactical harnesses, research coverage contracts, and typed finance dashboard APIs.</p></div>
-        <pre class="code"><code>deterministic quant research evaluator
+        <pre class="code"><code>public proof repo: agentic-finance-research-control-plane
+39 tests passed in 0.22s
+deterministic quant research evaluator
 read only A/B backtest harness
 tactical options real minute benchmark
 research coverage service + router tests
