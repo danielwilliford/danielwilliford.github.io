@@ -3,84 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Case Study | Research Source Ingestion Pipeline</title>
-  <meta name="description" content="Schema validated research source ingestion pipeline for technical PDFs and source metadata, with deterministic IDs, deduplication, checksum handling, path boundary checks, and review artifacts.">
-  <meta property="og:title" content="Case Study | Research Source Ingestion Pipeline">
-  <meta property="og:description" content="Schema validated research source ingestion pipeline for technical PDFs and source metadata, with deterministic IDs, deduplication, checksum handling, path boundary checks, and review artifacts.">
-  <meta property="og:type" content="article">
-  <meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="https://danielwilliford.github.io/assets/social-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image:alt" content="Daniel Williford forward deployed agentic AI portfolio preview"><meta name="twitter:image" content="https://danielwilliford.github.io/assets/social-preview.png">
-  <meta name="robots" content="noindex"><meta name="theme-color" content="#080b10"><link rel="canonical" href="https://danielwilliford.github.io/projects/research-source-ingestion-pipeline.html"><meta property="og:url" content="https://danielwilliford.github.io/projects/research-source-ingestion-pipeline.html">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../assets/site.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Research Source Ingestion Pipeline","name":"Research Source Ingestion Pipeline","description":"Schema-validated ingestion for research sources and technical PDFs with deterministic IDs, deduplication, checksum handling, path-boundary checks, and review artifacts.","author":{"@type":"Person","name":"Daniel Williford"},"inLanguage":"en","keywords":["Data ingestion","Evidence hygiene","Schema validation","Research artifacts","Deduplication","Boundary checks"],"about":["Research source ingestion","Evidence hygiene","Data validation"]}</script></head>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=evidence-backed-research-pipeline.html">
+  <link rel="canonical" href="https://danielwilliford.github.io/projects/evidence-backed-research-pipeline.html">
+  <title>Archived | Research Source Ingestion</title>
+</head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav class="nav"><div class="site-shell nav-inner nav-simple"><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#projects">Projects</a><a href="#architecture">Architecture</a><a href="#evidence">Evidence</a></div></div></nav>
-  <main id="main-content" tabindex="-1">
-    <section class="project-hero site-shell">
-      <div class="eyebrow">Case study</div>
-      <h1>Research Source Ingestion Pipeline</h1>
-      <p class="lede">A runnable source hygiene pipeline for turning unstructured research inputs into validated, deduplicated, provenance ready artifacts for agents.</p>
-      <div class="badges"><span class="badge">Runnable CLI</span><span class="badge">Schema validation</span><span class="badge">Deterministic IDs</span><span class="badge">Deduplication</span><span class="badge">Path boundaries</span><span class="badge">pytest</span></div><div class="actions"><a class="btn primary" href="https://github.com/danielwilliford/research-source-ingestion">Public repo</a><a class="btn" href="#evidence">Test evidence</a></div>
-      <div class="proof-strip"><div class="proof-item"><b>Clean input contract</b><span>Required metadata is validated before any note, log, queue, or artifact write.</span></div><div class="proof-item"><b>Stable identity</b><span>Source IDs and slugs are deterministic, so repeated ingestion can update rather than duplicate.</span></div><div class="proof-item"><b>Evidence hygiene</b><span>Checksums, source references, timestamps, and review status travel with the artifact.</span></div><div class="proof-item"><b>Safe write posture</b><span>Path boundary checks prevent writes outside approved research directories.</span></div></div>
-    </section>
-
-    <section class="section site-shell">
-      <div class="grid two">
-        <div class="card"><div class="kicker">Problem</div><h2>Useful research systems fail when source hygiene is loose.</h2><p>Before agents can summarize or reason over a corpus, sources need stable metadata, duplicate detection, provenance, review status, and strict write boundaries. Otherwise the system accumulates stale notes, duplicate PDFs, orphaned hypotheses, and unverifiable claims.</p></div>
-        <div class="card"><div class="kicker">System</div><h2>Make ingestion deterministic before analysis starts.</h2><p>The pipeline validates source metadata, derives a stable source identity, writes reviewable artifacts, updates a candidate queue, records archive logs, and refuses unsafe write paths. It is intentionally boring infrastructure: the part that makes later AI work auditable.</p></div>
-      </div>
-    </section>
-
-    <section class="section site-shell" id="architecture">
-      <div class="kicker">Architecture</div>
-      <h2>Ingestion flow with failure gates.</h2>
-      <div class="timeline"><div class="stage"><b>01 Source intake</b><span>Accept a local file or metadata only source reference with title, authors, year, source type, URL/path, and optional tags.</span></div><div class="stage"><b>02 Validate</b><span>Run schema checks for required fields, enum values, file size, checksum shape, DOI/arXiv shape, and unexpected legacy fields.</span></div><div class="stage"><b>03 Normalize</b><span>Generate an ASCII safe slug, deterministic source ID, checksum, and canonical source metadata packet.</span></div><div class="stage"><b>04 Deduplicate</b><span>Detect existing source references and slug collisions, then update verification metadata instead of creating duplicate artifacts.</span></div><div class="stage"><b>05 Write safely</b><span>Write ingestion notes, review queues, and archive logs only inside approved project/research directories.</span></div></div>
-    </section>
-
-    <section class="section site-shell">
-      <div class="grid two">
-        <div><div class="kicker">Implementation sketch</div><h2>Public proof without exposing private research strategy.</h2><p>This is a good first GitHub candidate because it demonstrates software hygiene without publishing private finance algorithms, datasets, strategy logic, account state, or proprietary research notes.</p></div>
-        <pre class="code"><code>source_metadata:
-  source_id: deterministic_uuid(title, source_ref, checksum)
-  type: book | paper | report | slide_deck | blog_post | thesis
-  title: required
-  authors: non_empty_list
-  year: bounded_integer
-  source_url_or_path: required
-  checksum_sha256: lowercase_hex
-
-gates:
-  validate_metadata before writes
-  reject oversized files
-  reject unexpected legacy fields
-  detect duplicate source_ref
-  block writes outside approved directories</code></pre>
-      </div>
-    </section>
-
-    <section class="section site-shell" id="evidence">
-      <div class="grid two">
-        <div><div class="kicker">Verification evidence</div><h2>The tests cover the boring failure modes that matter.</h2><p>The local test surface covers schema validation, slug generation, hypothesis/review IDs, status enums, deduplication, CLI fail closed behavior, oversized file rejection, and path boundary enforcement.</p></div>
-        <pre class="code"><code>pytest evidence:
-  schema fixtures validate and fail as expected
-  bad years, missing authors, empty authors rejected
-  oversized files rejected before artifact writes
-  unexpected legacy fields rejected
-  slug generation is deterministic
-  review IDs remain monotonic
-  duplicate source references are detected
-  path traversal and outside vault writes are blocked
-  dry run validates without writing artifacts</code></pre>
-      </div>
-    </section>
-
-    <section class="section site-shell">
-      <div class="grid two">
-        <div class="card"><div class="kicker">Why it matters for applied AI</div><h2>Source hygiene is an AI reliability feature.</h2><ul class="clean"><li>Agents can retrieve and cite durable source records instead of loose local notes.</li><li>Research artifacts carry provenance and review state before synthesis starts.</li><li>Duplicate and stale inputs are handled as operational failures, not hidden in generated prose.</li><li>Private domain logic stays private while the reusable ingestion pattern can be reviewed publicly.</li></ul></div>
-        <div class="card"><div class="kicker">Publication boundary</div><h2>What stays out of the public repo.</h2><ul class="clean"><li>No private vault paths, datasets, generated research notes, trading logic, strategy parameters, credentials, or account state.</li><li>No domain specific alpha claims or market performance claims.</li><li>Public copy should contain the ingestion utility, schema fixtures, tests, README, and sanitized sample metadata only.</li></ul></div>
-      </div>
-    </section>
+  <main>
+    <h1>Research Source Ingestion Has Moved</h1>
+    <p>This archived case has been folded into the combined Evidence Backed Research Pipeline.</p>
+    <p><a href="evidence-backed-research-pipeline.html">Open the combined research evidence case study</a>.</p>
   </main>
-  <footer class="footer"><div class="site-shell"><a href="../index.html">Back to homepage</a></div></footer>
 </body>
 </html>
